@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public class DeltaAutomation {
     public static void main(String[] args) throws InterruptedException {
-//       WebDriverManager.edgedriver().setup();
+
 
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.delta.com/");
