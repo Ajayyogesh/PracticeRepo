@@ -12,7 +12,7 @@ import java.io.File;
 
 public class SeleniumAkshay {
     public static void main(String[] args) {
-        WebDriverManager.edgedriver().setup();
+//        WebDriverManager.edgedriver().setup();
         WebDriver driver = new EdgeDriver();
 
         driver.get("https://www.saucedemo.com/");
