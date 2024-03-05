@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public class DeltaAutomation {
     public static void main(String[] args) throws InterruptedException {
-        WebDriverManager.edgedriver().setup();
+//       WebDriverManager.edgedriver().setup();
 
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.delta.com/");
@@ -26,11 +26,12 @@ public class DeltaAutomation {
 
         fromLocation.click();
         driver.findElement(By.xpath("//input[@id='search_input']")).sendKeys("bangalore");
-        WebElement location = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Bangalore')]")));
-        location.click();
-
-
-
+        WebElement locationFrom = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Bangalore')]")));
+        locationFrom.click();
+        toLocation.click();
+        driver.findElement(By.xpath("//input[@id='search_input']")).sendKeys("bali");
+        WebElement locationTo = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Bali')]")));
+        locationTo.click();
 
     }
 }
